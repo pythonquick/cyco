@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+        body { background: #dddddd; }
+        @media (prefers-color-scheme: dark) {
+            body { background: #4f4f4f; }
+        }
+    </style>
+    <title>Demo App</title>
+  </head>
+  <body>
+    <script type="module" src="/client/%INDEX_JS%"></script>
+    <div id="root"></div>
+  </body>
+</html>
