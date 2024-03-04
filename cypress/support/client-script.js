@@ -14,9 +14,13 @@ importsToLoad.push({
   relativeUrl: `${devServerPublicPathRoute}/${relative}`,
 });
 
+// trigger loading the imports
 CypressInstance.onSpecWindow(window, importsToLoad);
 
 CypressInstance.on('test:before:run', () => {});
+
+// then start the test process
+CypressInstance.action('app:window:before:load', window)
 
 // Make usage of node test plugins possible
 window.global = window;
