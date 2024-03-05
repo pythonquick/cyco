@@ -1,3 +1,4 @@
+import { Cypress } from “cypress”;
 console.log('Welcome.cy.js ....');
 describe('Welcome.cy.js', () => {
   console.log('Inside describe');
