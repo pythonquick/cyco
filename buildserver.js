@@ -84,16 +84,16 @@ esbuild
         } else if (filePath === '/cytest/index.html') {
           console.log('filePath:', filePath);
           console.log('supposed to handle cypress...');
-          const clientScript = fileSystem.readFileSync('cypress/support/client-script.js', {
-            encoding: 'utf-8',
-          });
+          // const clientScript = fileSystem.readFileSync('cypress/support/client-script.js', {
+          //   encoding: 'utf-8',
+          // });
 
           const contentToServe = indexHtml.replace(
             '<div id="root"></div>',
             `<div id="root"></div>
-          <div data-cy-root></div>
-          <script type="module">${clientScript}</script>`
+            <div data-cy-root></div>`
           );
+          //<script type="module">${clientScript}</script>`
           response
             .writeHead(200, {
               'Content-Type': 'text/html',
